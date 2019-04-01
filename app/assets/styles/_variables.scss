@@ -1,0 +1,17 @@
+//Default Colors
+$main-dark: #071c33;
+$main-light: #57c3b6;
+$main-gray: #c4c4c4;
+
+$light-text: #b0b5b5;
+
+$font-family: "Open Sans", sans-serif;
+
+// Breakpoint vars
+$breakpoints: (
+  xs: 480px,
+  sm: 600px,
+  md: 840px,
+  lg: 960px,
+  xl: 1280px
+);

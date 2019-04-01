@@ -1,0 +1,209 @@
+@import "/mixins";
+
+body {
+  #app {
+    padding: 0;
+
+    @include breakpoint(md) {
+      padding: 0 50px;
+    }
+  }
+
+  .container {
+    border: none;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 24px;
+    position: relative;
+    text-align: center;
+
+    @include breakpoint(sm) {
+      padding: 48px;
+    }
+
+    @include breakpoint(md) {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+      margin-top: 124px;
+    }
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+
+    a {
+      color: $main-gray;
+      font-size: 8px;
+    }
+  }
+  .main {
+    .logo {
+      position: absolute;
+      right: 22px;
+      top: 24px;
+
+      svg.desktop {
+        height: 25px;
+        display: none;
+      }
+      svg.mobile {
+        display: inherit;
+      }
+
+      @include breakpoint(sm) {
+        right: 60px;
+        top: 48px;
+      }
+
+      @include breakpoint(md) {
+        svg.desktop {
+          display: inherit;
+        }
+        svg.mobile {
+          display: none;
+        }
+      }
+
+      @include breakpoint(xl) {
+        right: 101px;
+      }
+    }
+  }
+
+  .thankyou {
+    .logo {
+      svg.desktop {
+        height: 25px;
+        margin: auto;
+        display: none;
+      }
+      svg.mobile {
+        margin: auto;
+        display: inherit;
+      }
+      @include breakpoint(md) {
+        svg.desktop {
+          display: inherit;
+        }
+        svg.mobile {
+          display: none;
+        }
+      }
+    }
+
+    .main-content {
+      min-height: 560px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: $main-dark;
+      }
+    }
+  }
+
+  .step-counter {
+    color: $light-text;
+    margin: 0 0 10px 0;
+    font-size: 12px;
+
+    @include breakpoint(sm) {
+      font-size: inherit;
+    }
+  }
+
+  .progress-bar {
+    display: flex;
+    color: $light-text;
+    font-size: 6px;
+    width: 90px;
+    margin: auto;
+    justify-content: space-between;
+
+    .active {
+      color: $main-light;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 8px;
+      width: 168px;
+    }
+  }
+
+  .btn {
+    background: transparent;
+    border: 1px solid $main-light;
+    color: $main-light;
+    font-size: 16px;
+    height: 41px;
+    width: 158px;
+
+    &[disabled] {
+      visibility: hidden;
+    }
+
+    svg {
+      padding-left: 5px;
+    }
+
+    &:hover {
+      background: $main-light;
+      border: none;
+      color: $main-dark;
+
+      svg {
+        path {
+          fill: $main-dark;
+        }
+      }
+    }
+  }
+
+  .btn-back {
+    background-color: $main-dark;
+    border: none;
+    color: $main-light;
+    height: 40px;
+    position: absolute;
+    width: 40px;
+    top: 24px;
+    left: 22px;
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid $main-light;
+    }
+
+    @include breakpoint(sm) {
+      left: 60px;
+      top: 48px;
+    }
+
+    @include breakpoint(xl) {
+      left: 101px;
+    }
+  }
+
+  .btn-success {
+    background-color: $main-light;
+    color: $main-dark;
+
+    &:hover {
+      background: transparent;
+      border: 1px solid $main-light;
+      color: $main-light;
+    }
+  }
+}

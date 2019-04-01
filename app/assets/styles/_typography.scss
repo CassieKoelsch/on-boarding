@@ -1,0 +1,48 @@
+@import "/mixins";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 24px;
+
+  h1 {
+    font-size: 4em;
+    font-weight: bold;
+    letter-spacing: 0.015em;
+  }
+  h2 {
+    font-size: 2.813em;
+    font-weight: bold;
+    letter-spacing: 0.015em;
+    line-height: 63px;
+  }
+  h3 {
+    color: #214164;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    line-height: 34px;
+    margin-top: 0;
+  }
+  h4 {
+    color: $main-light;
+    font-size: 1.375em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 31px;
+  }
+  .meta {
+    font-size: 0.875em;
+    letter-spacing: 0.02em;
+  }
+
+  @include breakpoint(sm) {
+    h3 {
+      font-size: 2em;
+      line-height: 45px;
+    }
+  }
+}
