@@ -1,5 +1,9 @@
 # On Boarding
 
+This app was built with React and will send an email with the on-boarding information.  It's purpose is to help new empolyees to select the type of computer they would like as well as give some information about the company.
+
+[DEMO](https://on-boarding-98207.firebaseapp.com/)
+
 ## Requirements
 
 For development, you will only need Node.js installed on your environement.

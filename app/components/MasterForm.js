@@ -206,7 +206,7 @@ class MasterForm extends React.Component {
     };
 
     const service_id = "default_service";
-    const template_id = "template_PATxKb9L";
+    const template_id = "template_yZ48xKOb";
     emailjs.send(service_id, template_id, templateParams).then(
       response => {
         console.log("SUCCESS!", response.status, response.text);
